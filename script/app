@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+cd /vagrant
+\curl -sSL https://get.rvm.io | bash -s stable
+source /home/vagrant/.rvm/scripts/rvm
+rvm install 2.1.2
+
+curl https://raw.githubusercontent.com/creationix/nvm/v0.17.2/install.sh | bash
+source ~/.nvm/nvm.sh
+nvm install 0.11.14
+nvm use
+npm install -g phantomjs
+npm install -g yo grunt-cli bower
+npm install -g mocha-phantomjs
+npm install generator-mocha-amd
+npm install generator-marionette
+npm install -g mocha
